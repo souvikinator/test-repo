@@ -21,8 +21,9 @@ jobs:
             ${{ github.event.release.html_url }}
 
             drop a ⭐if you liked the project :)
-            #DEVCommunity #OpenSource #100DaysOfCode  #javascript
+            #DEVCommunity #OpenSource #100DaysOfCode #javascript
+
           consumer-key: ${{ secrets.TWITTER_CONSUMER_API_KEY }}
-          consumer-secret: ${{ secrets.TWITTER_CONSUMER_API_SECRET }}
+          consumer-secret: ${{ secrets.TWITTER_CONSUMER_API_SECRET_KEY }}
           access-token: ${{ secrets.TWITTER_ACCESS_TOKEN }}
           access-token-secret: ${{ secrets.TWITTER_ACCESS_TOKEN_SECRET }}
