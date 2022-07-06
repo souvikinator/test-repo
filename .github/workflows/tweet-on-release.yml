@@ -11,18 +11,17 @@ jobs:
   send-release-tweet:
     runs-on: ubuntu-latest
     steps:
-      - uses: ethomson/send-tweet-action@v1
       - name: Release tweet
+        uses: ethomson/send-tweet-action@v1
         with:
           status: |
-              🥳Release test-repo ${{ github.event.release.name }}
-            
-              Changelog:-
-              ${{ github.event.release.html_url }}
-            
-              drop a ⭐if you liked the project :)
-              #DEVCommunity #OpenSource #100DaysOfCode  #javascript
-        
+            🥳Release test-repo ${{ github.event.release.name }}
+
+            Changelog:-
+            ${{ github.event.release.html_url }}
+
+            drop a ⭐if you liked the project :)
+            #DEVCommunity #OpenSource #100DaysOfCode  #javascript
           consumer-key: ${{ secrets.TWITTER_CONSUMER_API_KEY }}
           consumer-secret: ${{ secrets.TWITTER_CONSUMER_API_SECRET }}
           access-token: ${{ secrets.TWITTER_ACCESS_TOKEN }}
